@@ -15,9 +15,9 @@ sys.path.append(GlobalConfig.ROOT_DIR)
 
 mail_host = "smtp.exmail.qq.com"
 mail_user = "qa@haochezhu.club"
-mail_pass = "9cW9A5h3cSfuv7bP"
+mail_pass = "123"
 # 收件人
-mailto_list = ["peide.guo@haochezhu.club", "bxkf_qa_team@haochezhu.club"]
+mailto_list = ["123"]
 report_file = f".{os.sep}report.html"
 # 邮件内url
 time_str = time.strftime("%Y_%m_%d__%H_%M_%S", time.localtime())
