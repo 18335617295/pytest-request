@@ -1,0 +1,140 @@
+Api:
+  /aep-demeter/maintenance-ump/api/calculate-price
+Input:
+  test_calculate_price:
+    1:
+      case_name: 保养首页计价
+      param:
+        - id: 98
+          name: 自动化测试专用!!!
+          sort: 5
+          sellPrice: 634.51
+          marketPrice: 812.02
+          packageSaled: 1
+          configList:
+            - id: 808
+              canLimitBuySize: 1
+              minSize: null
+              maxSize: null
+              maintenanceServiceId: 98
+              thirdCategoryId: 13
+              size: 17
+              sellPrice: 55.51
+              marketPrice: 76.69
+              goodsResultList:
+                - id: 15
+                  cate: 13
+                  goodsName: 蓝壳 合成机油 SN 5W-30 1升
+                  price: 76.69
+                  promotePrice: 55.51
+                  thumb: >-
+                    https://aep-item.oss-cn-beijing.aliyuncs.com/item/1629284700159872288.jpg
+                  brandId: 3
+                  brandName: 壳牌
+                  spu: null
+                  sku: SKU840
+                  mark: null
+                  level: null
+                  num: 1
+                  skuSpeResults: [ ]
+              refilled: '5.0'
+              isPop: 1
+              maintenanceServiceRecommendRelationDTOList: null
+              workPriceList:
+                - id: 172
+                  workHourName: 工时费
+                  workHourDictId: '1'
+                  maintenanceServiceId: 98
+                  maintenanceConfigId: 808
+                  workPrice: 66
+                  skuId: null
+                  num: 0
+                  isAddBySize: 0
+              checked: true
+            - id: 809
+              canLimitBuySize: 1
+              minSize: null
+              maxSize: null
+              maintenanceServiceId: 98
+              thirdCategoryId: 43
+              size: 1
+              sellPrice: 579
+              marketPrice: 735.33
+              goodsResultList:
+                - id: 935
+                  cate: 43
+                  goodsName: 235/55ZR19
+                  price: 735.33
+                  promotePrice: 579
+                  thumb: >-
+                    https://aep-item.oss-cn-beijing.aliyuncs.com/item/1629284563737643068.jpg
+                  brandId: 16
+                  brandName: 德小黑轮胎
+                  spu: null
+                  sku: SKU1306
+                  mark: null
+                  level: null
+                  num: 1
+                  skuSpeResults: [ ]
+              refilled: '5.0'
+              isPop: 1
+              maintenanceServiceRecommendRelationDTOList: null
+              workPriceList: [ ]
+              checked: true
+          workPriceList:
+            - id: 172
+              workHourName: 工时费
+              workHourDictId: '1'
+              maintenanceServiceId: 98
+              maintenanceConfigId: 808
+              workPrice: 66
+              skuId: null
+              num: 0
+              isAddBySize: 0
+          tags: null
+          checked: true
+          result:
+            - 808
+            - 809
+          goodsList:
+            - id: 15
+              cate: 13
+              goodsName: 蓝壳 合成机油 SN 5W-30 1升
+              price: 76.69
+              promotePrice: 55.51
+              thumb: >-
+                https://aep-item.oss-cn-beijing.aliyuncs.com/item/1629284700159872288.jpg
+              brandId: 3
+              brandName: 壳牌
+              spu: null
+              sku: SKU840
+              mark: null
+              level: null
+              num: 1
+              skuSpeResults: [ ]
+              canLimitBuySize: 1
+              maxSize: null
+              minSize: null
+              refilled: '5.0'
+              isPop: 1
+            - id: 935
+              cate: 43
+              goodsName: 235/55ZR19
+              price: 735.33
+              promotePrice: 579
+              thumb: >-
+                https://aep-item.oss-cn-beijing.aliyuncs.com/item/1629284563737643068.jpg
+              brandId: 16
+              brandName: 德小黑轮胎
+              spu: null
+              sku: SKU1306
+              mark: null
+              level: null
+              num: 1
+              skuSpeResults: [ ]
+              canLimitBuySize: 1
+              maxSize: null
+              minSize: null
+              refilled: '5.0'
+              isPop: 1
+

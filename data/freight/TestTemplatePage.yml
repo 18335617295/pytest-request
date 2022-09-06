@@ -1,0 +1,25 @@
+Api:
+  /aep-hades/api/template/page
+Input:
+  test_template_page:
+    1:
+      case_name: 邮费模版列表code搜索
+      param:
+        templateCode: 2722012111001000025
+
+    2:
+      case_name: 邮费模版列表名称搜索
+      param:
+        templateName: 23
+    3:
+      case_name: 邮费模版列表
+      param:
+        templateName:
+        templateCode:
+
+Template:
+  current: 1
+  size: 10
+  pageNum: 1
+  templateName:
+  templateCode:

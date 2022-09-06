@@ -1,0 +1,7 @@
+Api:
+  /aep-demeter/api/seckill/performance/list
+Input:
+  test_seckill_performance_list:
+    1:
+      case_name: 秒杀列表
+      param:

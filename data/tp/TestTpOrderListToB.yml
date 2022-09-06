@@ -1,0 +1,33 @@
+Api:
+  /aep-hades/api/order/list
+Input:
+  test_order_list_succeed:
+    1:
+      case_name: 全部列表
+      param:
+    2:
+      case_name: 全部列表
+      param:
+        current: 2
+        size: 50
+    3:
+      case_name: 指定订单
+      param:
+        orderNo: 1421034632593408000
+
+
+Template:
+  current: 1
+  size: 10
+  shopId: 221620803889484
+  orderNo:
+  orderStatus:
+  orderType:
+  payTimeEnd:
+  payTimeStart:
+  paymentSerialNumber:
+  placeOrderTimeEnd:
+  placeOrderTimeStart:
+  placeOrderUserName:
+  receiveName:
+  receivePhone:

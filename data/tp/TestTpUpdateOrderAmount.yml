@@ -1,0 +1,11 @@
+Api:
+  /aep-hades/api/update-sub-order-amount
+Input:
+  test_update_order_amount_succeed:
+    1:
+      case_name: 修改待支付订单金额
+      param:
+        orderNo: 123
+        originAmount: 123
+        payAmount: 20
+      sql: select * from tp_order where order_status = 10 order by id desc

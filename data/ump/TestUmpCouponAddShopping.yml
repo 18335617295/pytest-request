@@ -1,0 +1,131 @@
+Api:
+  "/aep-poseidon/api/coupon/template/manage/add"
+
+InsertDB:
+  - delete from coupon_template_info where coupon_template_name like "name%"
+  - delete from coupon_discount_template_rule_info where coupon_template_name like "name%"
+
+Input:
+  test_coupon_add_succeed:
+    1:
+      case_name: 正向case_验证创建优惠券模版（平台满减券---全品券）
+      param:
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name"
+    2:
+      case_name: 正向case_验证创建优惠券模版（平台满减券---限品类【限类目】）
+      param:
+        couponTemplateName: "name1"
+        couponSelectedType: 2
+        thirdCategoryIdList: ["19","21","39"]
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name1"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name1"
+    3:
+      case_name: 正向case_验证创建优惠券模版（平台满减券---限品类【限SPU】）
+      param:
+        couponTemplateName: "name2"
+        couponDiscountPrefix: "0"
+        couponDiscountSurfix: "30"
+        couponSelectedType: 1
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name2"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name2"
+    4:
+      case_name: 正向case_验证创建优惠券模版（平台满折券---全品类）
+      param:
+        couponTemplateName: "name3"
+        couponDiscountPrefix: "300"
+        couponDiscountSurfix: "7"
+        couponType: 2
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name3"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name3"
+    5:
+      case_name: 正向case_验证创建优惠券模版（平台满折券---限品类【限类目】）
+      param:
+        couponTemplateName: "name4"
+        couponDiscountPrefix: "300"
+        couponDiscountSurfix: "7"
+        couponSelectedType: 2
+        couponType: 2
+        thirdCategoryIdList: ["19","21","39"]
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name4"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name4"
+    6:
+      case_name: 正向case_验证创建优惠券模版（平台满折券---限品类【限SPU】）
+      param:
+        couponTemplateName: "name5"
+        couponDiscountPrefix: "300"
+        couponDiscountSurfix: "7"
+        couponType: 2
+        couponSelectedType: 1
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name5"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name5"
+    7:
+      case_name: 正向case_验证创建优惠券模版（平台抵扣券---全品类）
+      param:
+        couponTemplateName: "name6"
+        couponDiscountPrefix: "0"
+        couponDiscountSurfix: "30"
+        couponType: 3
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name6"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name6"
+    8:
+      case_name: 正向case_验证创建优惠券模版（平台抵扣券---限品类【限类目】）
+      param:
+        couponTemplateName: "name4"
+        couponDiscountPrefix: "0"
+        couponDiscountSurfix: "30"
+        couponSelectedType: 2
+        couponType: 3
+        thirdCategoryIdList: ["19","21","39"]
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name7"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name7"
+    9:
+      case_name: 正向case_验证创建优惠券模版（平台抵扣券---限品类【限SPU】）
+      param:
+        couponTemplateName: "name8"
+        couponDiscountPrefix: "0"
+        couponDiscountSurfix: "30"
+        couponType: 3
+        couponSelectedType: 1
+      sqllist:
+        - delete from coupon_template_info where coupon_template_name = "name8"
+        - delete from coupon_discount_template_rule_info where coupon_template_name = "name8"
+
+    10:
+      case_name: 正向case_验证优惠券名称重复
+      param:
+      sqllist:
+       - delete from coupon_template_info where coupon_template_name = "name"
+       - delete from coupon_discount_template_rule_info where coupon_template_name = "name"
+
+
+Template:
+  couponDiscountMustIncludeCategories: []
+  couponDiscountPrefixType: 0
+  couponTemplateName: "name"
+  isShelf: ""
+  couponTemplateRuleId: ""
+  couponType: 1
+  couponUseType: 1
+  couponReleaseType: 1
+  couponDiscountPrefix: "20"
+  couponDiscountSurfix: "3"
+  couponValidityType: 3
+  couponValidityStartTime: ""
+  couponValidityEndTime: ""
+  couponValidityAfterSendDay: "3"
+  discountDesc: "使用说明"
+  link: "跳转链接"
+  totalStock: "999"
+  couponSelectedType: 3
+  couponItemInfoId: ""
+  thirdCategoryIdList: []
+  limitNum: 1

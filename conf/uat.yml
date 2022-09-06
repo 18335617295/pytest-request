@@ -1,0 +1,40 @@
+DB:
+  host: 8.8.8.8
+  port: 3306
+  user: root
+  passwd: 123456
+  charset: utf8
+
+ClickHouse:
+  host: 8.8.8.8
+  port: 3306
+  user: root
+  passwd: 123456
+  db: default
+
+Redis:
+  host: 8.8.8.8
+  port: 6379
+  password: 123456
+
+
+Mq:
+  host: 172.19.242.56:9876
+  user: rocketmq2
+  pass: "12345678"
+Services_name:
+  to_c: "https://"
+  to_b: "https://"
+Account:
+  1:
+    username: hades001
+    password: 111111
+  2:
+    username: test_admin
+    password: test_admin
+  3:
+    username: 18399889988
+  4:
+    username: 13231122334
+  5:
+    username: 13821212121

@@ -1,0 +1,39 @@
+Api:
+  /aep-tp/tp-toc/order/detail
+Input:
+  test_order_detail_succeed:
+    1:
+      case_name: 待支付订单详情
+      param:
+        orderStatus: 10
+      sql: select parent_order_no from tp_order where order_status = 10 order by id desc
+    2:
+      case_name: 待发货订单详情
+      param:
+        orderStatus: 30
+      sql: select order_no from tp_order where order_status = 30 order by id desc
+    3:
+      case_name: 售后中订单详情
+      param:
+        orderStatus: 90
+      sql: select order_no from tp_order where order_status = 90 order by id desc
+    4:
+      case_name: 代服务订单详情
+      param:
+        orderStatus: 70
+      sql: select order_no from tp_order where order_status = 70 order by id desc
+    5:
+      case_name: 服务中订单详情
+      param:
+        orderStatus: 71
+      sql: select order_no from tp_order where order_status = 71 order by id desc
+    6:
+      case_name: 订单关闭订单详情
+      param:
+        orderStatus: 100
+      sql: select parent_order_no from tp_order where order_status = 100 and pay_status = 1 order by id desc
+    7:
+      case_name: 服务完成订单详情
+      param:
+        orderStatus: 72
+      sql: select order_no from tp_order where order_status = 72 and pay_status = 2 order by id desc

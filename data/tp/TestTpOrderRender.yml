@@ -1,0 +1,105 @@
+Api:
+  /aep-tp/tp-toc/order/render
+Input:
+  test_order_render_succeed:
+    1:
+      case_name: 一个服务,一个商品
+      param:
+    2:
+      case_name: 多个服务,多个商品
+      param:
+        skuInfoList:
+          - skuId: 967
+            skuNum: 5
+            context:
+              configId: 665
+              serviceId: 69
+          - skuId: 971
+            skuNum: 1
+            context:
+              configId: 640
+              serviceId: 68
+          - skuId: 980
+            skuNum: 2
+            context:
+              configId: 668
+              serviceId: 83
+    3:
+      case_name: 邮寄到家渲染
+      param:
+        bizType: "c-logistics"
+        skuInfoList:
+          - skuId: 736
+            skuNum: 1
+          - skuId: 935
+            skuNum: 1
+          - skuId: 936
+            skuNum: 1
+          - skuId: 100542
+            skuNum: 6
+    4:
+      case_name: 轮胎专场渲染
+      param:
+        couponIdList: [ ]
+        skuInfoList:
+          - skuId: 935
+            skuNum: 2
+            context:
+              isTire: true
+        vin: ZARCALCN9J7B92328
+        vehicleId: 5380
+        userVehicleId: 1339
+        bizType: maintenance-package
+  test_order_render_pre_sale:
+    1:
+      case_name: 商品预售渲染
+      param:
+        couponIdList: []
+        skuInfoList:
+          - skuId: 100542
+            skuNum: 1
+        bizType: PRE_SALE
+
+  test_order_render_maintenance_factory:
+    1:
+      case_name: 修理厂改价订单渲染
+      param:
+        couponIdList: [ ]
+        skuInfoList:
+          - context:
+              configId: 911
+              serviceId: 98
+            skuId: 100549
+            skuNum: 3
+          - context:
+              configId: 911
+              serviceId: 98
+            skuId: 100542
+            skuNum: 1
+          - context:
+              configId: 912
+              serviceId: 98
+            skuId: 935
+            skuNum: 2
+        vin: ZARCALCN9J7B92328
+        vehicleId: 5380
+        userVehicleId: 1339
+        bizType: maintenance-factory
+        storeId: '231624529234580'
+Template:
+  storeId: ~
+  bizType: "maintenance-package"
+  userVehicleId: 466
+  couponIdList: []
+  vin: LGBF1CE016R174349
+  skuInfoList:
+    - context:
+        configId: 778
+        serviceId: 98
+      skuId: 100549
+      skuNum: 1
+    - context:
+        configId: 779
+        serviceId: 98
+      skuId: 935
+      skuNum: 1

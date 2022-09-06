@@ -1,0 +1,89 @@
+Api:
+  /aep-hades/api/price/change
+Input:
+  test_factory_change_create:
+    1:
+      case_name: 一个坑位参与改价
+      param:
+
+  test_factory_change_edit:
+    1:
+      case_name: 编辑服务项配置
+      param:
+        id: 53
+        serverNo: '3122030314342400166'
+        serverName: 测试
+        serverDesc: '111'
+        maintenanceId: 98
+        maintenanceName: 自动化测试专用!!!
+        workHoursPrice: 200
+        shopId: 221620803889484
+        updater: null
+        creator: hades001
+        ctime: '2022-03-03 14:34:25'
+        mtime: '2022-03-04 17:44:14'
+        priceChangeConfigs:
+          - id: 42
+            serverId: 53
+            maintenanceConfigId: 911
+            maintenanceId: 98
+            valuationFlag: 1
+            configNum: 3
+            selectSkus:
+              - skuId: 100542
+                skuName: null
+                skuImage: null
+                defaultStatus: 1
+              - skuId: 100544
+                skuName: null
+                skuImage: >-
+                  https://hive-test.oss-cn-beijing.aliyuncs.com/item/1639033132731571638.jpeg
+                defaultStatus: 0
+            configName: null
+            numKey: 1
+          - id: 43
+            serverId: 53
+            maintenanceConfigId: 912
+            maintenanceId: 98
+            valuationFlag: 0
+            configNum: 2
+            selectSkus:
+              - skuId: 751
+                skuName: null
+                skuImage: null
+                defaultStatus: 1
+            configName: null
+            numKey: 2
+Template:
+  id: ''
+  maintenanceId: 98
+  maintenanceName: 自动化测试专用!!!
+  priceChangeConfigs:
+    - id: ''
+      maintenanceServiceId: 98
+      thirdCategoryId: 13
+      maintenanceConfigId: 911
+      valuationFlag: 1
+      numKey: 1
+      configNum: 1
+      selectSkus:
+        - skuId: 100542
+          skuName: 壳牌机油
+          skuImage: null
+          defaultStatus: 1
+    - id: ''
+      maintenanceServiceId: 98
+      thirdCategoryId: 43
+      maintenanceConfigId: 912
+      valuationFlag: 0
+      numKey: 2
+      configNum: 2
+      selectSkus:
+        - skuId: 751
+          skuName: 德小黑轮胎
+          skuImage: null
+          defaultStatus: 1
+  serverDesc: '111'
+  serverName: 测试
+  serverNo: ''
+  workHoursPrice: 200

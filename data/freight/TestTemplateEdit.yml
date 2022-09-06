@@ -1,0 +1,74 @@
+Api:
+  /aep-hades/api/template/edit
+Input:
+  test_template_edit:
+    1:
+      case_name: 邮费模版编辑
+      param:
+
+
+Template:
+  id: 12
+  shopId: 221620803889484
+  templateName: 测试新建模版
+  freeFlag: 1
+  ruleType: 1
+  status: 1
+  templateRules:
+    - id: 23
+      citys:
+        - '110101'
+        - '110102'
+        - '110105'
+        - '110106'
+        - '110107'
+        - '110108'
+        - '110109'
+        - '110111'
+        - '110112'
+        - '110113'
+        - '110114'
+        - '110115'
+        - '110116'
+        - '110117'
+        - '110118'
+        - '110119'
+      defaultNum: 1
+      defaultPrice: 15
+      continueNum: 2
+      continuePrice: 1
+      freeCondition: 5
+    - id: 22
+      citys:
+        - CN
+      defaultNum: 2
+      defaultPrice: 10
+      continueNum: 1
+      continuePrice: 3
+      freeCondition: 0
+    - index: null
+      citys:
+        - '120101'
+        - '120102'
+        - '120103'
+        - '120104'
+        - '120105'
+        - '120106'
+        - '120110'
+        - '120111'
+        - '120112'
+        - '120113'
+        - '120114'
+        - '120115'
+        - '120116'
+        - '120117'
+        - '120118'
+        - '120119'
+      continueNum: 3
+      continuePrice: 4
+      defaultNum: 1
+      defaultPrice: 2
+      freeCondition: 5
+      id: null
+  skuResultList: [ ]
+  maxDeductNum: null

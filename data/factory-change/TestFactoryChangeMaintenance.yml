@@ -1,0 +1,12 @@
+Api:
+  /aep-vulcan/api/change/sku-list/maintenance
+Input:
+  test_factory_change_sku_list:
+    1:
+      case_name: 改价服务项详情
+      param:
+        serverId: 48
+    2:
+      case_name: 改价服务项详情
+      param:
+        serverId: 52

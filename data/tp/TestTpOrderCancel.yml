@@ -1,0 +1,24 @@
+Api:
+  /aep-tp/tp-toc/order/cancel
+Input:
+  test_order_cancel_succeed:
+    1:
+      case_name: c端申请取消订单
+      param:
+      sql: select * from gd_tp_uat.tp_order where order_status = 10 order by id desc
+  test_order_cancel_failed:
+    1:
+      case_name: 非待支付取消订单
+      param:
+        orderStatus: 100
+      sql: select * from gd_tp_uat.tp_order where order_status = 100 order by id desc
+      expect:
+        code: 3502
+        data: ~
+        msg: 订单当前状态不允许此操作
+Template:
+  applyReason: 1
+  orderNo: "1413680704713261056"
+  orderStatus: 10
+  plat: 1
+  remark: "自动化申请"

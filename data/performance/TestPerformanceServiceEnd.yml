@@ -1,0 +1,14 @@
+Api:
+  "https://hermes.uat.haochezhu.club/aep-hermes/api/offline-service/end"
+Input:
+  test_performance_service_end:
+    1:
+      case_name: 结束履约更新订单状态
+      param:
+        operatorName: sass
+        orderNo:
+        serviceNo:
+        sourceType: 2
+        storeId: 837
+        voucherCode:
+      sql: select * from order_voucher_record inner join order_service_record on order_service_record.order_no=order_voucher_record.order_no inner join gd_tp_uat.tp_order on order_service_record.order_no = tp_order.order_no where voucher_no !='' and order_status = 71 order by order_voucher_record.id desc

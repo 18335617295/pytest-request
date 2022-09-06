@@ -1,0 +1,11 @@
+Api:
+  /aep-tp/tp-toc/order/refund-render
+Input:
+  test_order_refund_render:
+    1:
+      case_name: 单个商品退款渲染
+      param:
+        orderNo: 1490889203142230016
+        skuNoList:
+          - skuId: "SKU1003"
+            sequence: 0

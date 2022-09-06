@@ -1,0 +1,14 @@
+Api:
+  /aep-demeter/api/order/afterSales/apply
+Input:
+  test_order_after_sales_apply:
+    1:
+      case_name: 退款单申请
+      param:
+        applyReason: 9
+        applyType: 2
+        orderNo: 1435709760052789248
+        refundTotalAmt: 78
+        remark:
+        skuList: []
+      sql: select sku_no,sku_num,snapshot,order_no from tp_order_sku where order_no = (select order_no from tp_order where order_status = 30 and order_type = 1 order by id desc limit 1)

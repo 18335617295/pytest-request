@@ -1,0 +1,15 @@
+Api:
+  /cashier/payTypeQuery
+Input:
+  test_cashier_pay_type_query:
+    1:
+      case_name: 支付宝
+      param:
+        payOrderNo: UCO20220105142630080000043
+        source: '01'
+      sql: SELECT * FROM tp_order_pay WHERE deleted = 0 and pay_status = 1  ORDER BY ctime DESC LIMIT 1
+      API:
+        api: https://athenav2.uat.haochezhu.club/cashier/payConfirm
+        param:
+          payOrderNo: UCO20220105142630080000043
+          payType: ALIPAY_APP

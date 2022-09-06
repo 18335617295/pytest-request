@@ -1,0 +1,39 @@
+Api:
+  /aep-demeter/api/ump/calculate-cart-price?areaId=CN
+Input:
+  test_calculate_cart_price:
+    1:
+      case_name: 购物车计价
+      param:
+        - shopId: 221620803889484
+          itemParamList:
+            - skuId: 871
+              skuNum: 12
+            - skuId: 948
+              skuNum: 10
+            - skuId: 983
+              skuNum: 10
+            - skuId: 938
+              skuNum: 10
+            - skuId: 941
+              skuNum: 10
+            - skuId: 892
+              skuNum: 10
+  test_coupon_calculate_cart_price:
+    1:
+      case_name: 购物车计价
+      param:
+        - shopId: 221620803889484
+          itemParamList:
+            - skuId: 100547
+              skuNum: 1
+            - skuId: 100542
+              skuNum: 1
+            - skuId: 1235
+              skuNum: 1
+            - skuId: 763
+              skuNum: 1
+            - skuId: 765
+              skuNum: 1
+            - skuId: 751
+              skuNum: 1

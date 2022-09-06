@@ -1,0 +1,11 @@
+Api:
+  "https://hermes.uat.haochezhu.club/aep-hermes/api/offline-service/start"
+Input:
+  test_performance_service_start:
+    1:
+      case_name: 开始履约更新订单状态
+      param:
+        orderNo:
+        voucherCode:
+        serviceNo:
+      sql: select * from order_voucher_record inner join order_service_record on order_service_record.order_no=order_voucher_record.order_no inner join gd_tp_uat.tp_order on order_service_record.order_no = tp_order.order_no where voucher_no !='' and order_status = 70 order by order_voucher_record.id desc

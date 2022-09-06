@@ -1,0 +1,9 @@
+Api:
+  /aep-demeter/api/ump/coupon/my-available-couponList/c-logistics
+Input:
+  test_coupon_c_logistics_succeed:
+    1:
+      case_name: 可用优惠券(面向到家)
+      param:
+Template:
+  {"myCouponListReqs":[{"sequence":0,"skuId":878,"shoppingCartId":213,"shopId":221620803889484,"name":"CLYS100014","subTitle":null,"skuNo":"SKU1249","picUrl":"https://aep-item.oss-cn-beijing.aliyuncs.com/item/1628669929159676576.jpg","skuNum":10,"hidden":null,"publishStatus":2,"description":null,"brandId":"23","price":8800,"distributionPrice":0,"promotionPrice":3900,"totalDiscountPrice":0,"couponShareItemPrice":null,"canSaleNum":9354,"type":null,"context":null,"storeId":null,"refundStatus":null,"refundGoodsStatus":null,"applyCode":null,"itemResult":{"id":341,"name":"鹰卫士无骨雨刮器","subTitle":"","picId":1098,"brandId":23,"shopId":221620803889484,"brandName":"鹰卫士","brandLogo":"https://aep-item.oss-cn-beijing.aliyuncs.com/item/1628595415180104922.png","canReturn":1,"itemCategoryFirstId":52,"itemCategoryFirstName":null,"itemCategorySecondId":53,"itemCategorySecondName":null,"itemCategoryThirdId":55,"itemCategoryThirdName":null,"productSn":"SP1217","publishStatus":2,"verifyStatus":2,"sort":null,"unit":"个","keywords":null,"upperStartTime":"2021-05-19 19:00:00","upperEndTime":"2021-04-19 19:00:00","description":"","picUrl":"https://aep-item.oss-cn-beijing.aliyuncs.com/item/1628669929159676576.jpg"},"skuSpeResults":[{"speId":"36","spe":"雨刮尺寸","speValueId":"876","speValue":"14英寸","unit":""}],"totalPrice":39000}]}

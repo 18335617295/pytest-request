@@ -1,0 +1,26 @@
+Api:
+  /aep-tp/tp-toc/order/list
+Input:
+  test_order_list_succeed:
+    2:
+      case_name: 待付款列表
+      param:
+        frontOrderStatus: 1
+        current: 1
+        size: 10
+      sql: select count(*) from tp_order where user_id = 1139065844 and deleted = 0 and order_status = 10
+    3:
+      case_name: 待发货列表
+      param:
+        frontOrderStatus: 2
+        current: 1
+        size: 10
+      sql: select count(*) from tp_order where user_id = 1139065844 and deleted = 0 and order_status in (30,90)
+    4:
+      case_name: 待收货列表
+      param:
+        frontOrderStatus: 3
+        current: 1
+        size: 10
+      sql: select count(*) from tp_order where user_id = 1139065844 and deleted = 0 and order_status in (70,71,40)
+

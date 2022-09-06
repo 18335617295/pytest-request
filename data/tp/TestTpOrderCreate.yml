@@ -1,0 +1,123 @@
+Api:
+  /aep-tp/tp-toc/order/create
+Input:
+  test_order_create_succeed:
+    1:
+      case_name: 到店服务
+      param:
+    2:
+      case_name: 邮寄到家
+      param:
+        bizType: c-logistics
+        payAmount: 90100
+        type: 2
+        skuInfoList:
+          - skuId: 751
+            skuNum: 2
+          - skuId: 878
+            skuNum: 2
+
+  test_order_create_fail:
+    1:
+      case_name: 下单金额错误
+      param:
+        payAmount: 10
+      expect:
+        code: 2004
+        data: ~
+        msg: 价格已变化，请重新下单
+    2:
+      case_name: 下架商品不能下单
+      param:
+        skuInfoList:
+          - skuId: 901
+            skuNum: 4
+            context:
+              configId: 665
+              serviceId: 69
+          - skuId: 15
+            skuNum: 4
+            context:
+              configId: 665
+              serviceId: 69
+      expect:
+        code: -1
+        data: ~
+        msg: 下列商品已下架：车内饰品
+
+    3:
+      case_name: 无履约规则
+      param:
+        bizType: c-logistics
+        payAmount: 59400
+        skuInfoList:
+          - skuId: 913
+            skuNum: 1
+            context:
+              configId: 665
+              serviceId: 69
+      expect:
+        code: -1
+        data: ~
+        msg: 该商品不支持邮寄到家：超威免维护蓄电池6-QW-70(550)-D26-L-T2_80D26
+  test_order_create_pre_sale:
+    1:
+      case_name: 预售商品下单
+      param:
+        couponIdList: []
+        skuInfoList:
+          - skuId: 100542
+            skuNum: 1
+        payAmount: 2000
+        userAddressId: 98
+        bizType: PRE_SALE
+        remark: ''
+        type: 2
+
+Template:
+  vehicleId: 5380
+  userVehicleId: 638
+  bizType: "maintenance-package"
+  couponIdList: []
+  serviceStartTime: ""
+  payAmount: 117500
+  storeId: 231624529234580
+  type: 1
+  vin: ZARCALCN9J7B92328
+  skuInfoList:
+    - context:
+        configId: 778
+        serviceId: 98
+      skuId: 100549
+      skuNum: 2
+    - context:
+        configId: 779
+        serviceId: 98
+      skuId: 935
+      skuNum: 1
+    - context:
+        workHourId: '155'
+        workPrice: '122.0'
+        isWorkPrice: 'true'
+        workHourName: 自动化工时1
+        workHourDictId: '32'
+        serviceId: '98'
+        workServiceConfigurationId: '155'
+        workHourNum: '0'
+      skuId: 739
+      skuNum: 12200
+    - context:
+        workHourId: '156'
+        workPrice: '122.0'
+        isWorkPrice: 'true'
+        workHourName: 自动化工时2
+        workHourDictId: '158'
+        serviceId: '98'
+        workServiceConfigurationId: '156'
+        workHourNum: '0'
+      skuId: 739
+      skuNum: 12200
+  userAddressId: 49
+
+
+

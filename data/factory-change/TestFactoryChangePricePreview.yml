@@ -1,0 +1,9 @@
+Api:
+  /aep-vulcan/api/change/price/preview
+Input:
+  test_factory_change_price_preview:
+    1:
+      case_name: 改价服务项详情
+      param:
+        serverId: 52
+        changePrice: 2000

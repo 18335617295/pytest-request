@@ -1,0 +1,18 @@
+Api:
+  /aep-demeter/api/ump/coupon/my-available-couponList/maintenance-package
+Input:
+  test_coupon_maintenance_package_succeed:
+    1:
+      case_name: 可用优惠券（面向到店）
+      param:
+Template:
+  myCouponListReqs:
+    - sequence: 1
+      skuId: 751
+      skuNum: 1
+    - sequence: 2
+      skuId: 765
+      skuNum: 1
+    - sequence: 0
+      skuId: 763
+      skuNum: 1

@@ -1,0 +1,13 @@
+Api:
+  /ump/coupon/get-coupon
+Input:
+  test_coupon_get_succeed:
+    1:
+      case_name: 领取优惠券
+      param:
+        couponTemplateInfoId: cf2163641b0b429c8af435901dd3b89e
+  test_coupon_get_fail:
+    1:
+      case_name: 领取优惠券（领取重复）
+      param:
+        couponTemplateInfoId: cf2163641b0b429c8af435901dd3b89e

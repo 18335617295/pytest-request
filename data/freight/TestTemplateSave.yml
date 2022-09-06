@@ -1,0 +1,51 @@
+Api:
+  /aep-hades/api/template/save/
+Input:
+  test_template_save:
+    1:
+      case_name: 邮费模版创建
+      param:
+
+
+Template:
+  freeFlag: 1
+  removeRuleIds: []
+  ruleType: 1
+  status: null
+  templateName: 测试新建模版
+  templateRules:
+    - index: null
+      citys:
+        - CN
+      continueNum: 1
+      continuePrice: 3
+      defaultNum: 2
+      defaultPrice: 10
+      freeCondition: 0
+      id: null
+    - index: null
+      defaultNum: 1
+      defaultPrice: 15
+      continueNum: 2
+      continuePrice: 1
+      freeCondition: 5
+      citys:
+        - '110101'
+        - '110102'
+        - '110105'
+        - '110106'
+        - '110107'
+        - '110108'
+        - '110109'
+        - '110111'
+        - '110112'
+        - '110113'
+        - '110114'
+        - '110115'
+        - '110116'
+        - '110117'
+        - '110118'
+        - '110119'
+  templateRuleList: []
+  skuResultList: []
+  maxDeductNum: null

@@ -1,0 +1,7 @@
+Api:
+  /aep-demeter/maintenance-recommend/api/sku-detail-list/id/32/biz-type/c-logistics?vin=&vehicleId=&shopType=0
+Input:
+  test_sku_detail_list:
+    1:
+      case_name: 预售详情
+      param:

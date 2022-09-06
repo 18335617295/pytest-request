@@ -1,0 +1,8 @@
+Api:
+  /aep-poseidon/api/coupon/template/manage/addSku
+Input:
+  test_coupon_sku_add_succeed:
+    1:
+      case_name: 限SPU优惠券，AddSKU
+      param:
+        spuId: "240,241"

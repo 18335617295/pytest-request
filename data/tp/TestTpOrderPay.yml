@@ -1,0 +1,19 @@
+Api:
+  "http://172.19.242.235:7050/aep-tp/tp/order/pay"
+Input:
+  test_order_py_succeed:
+    1:
+      case_name: 支付成功回调
+      param:
+        message:
+          payOrderNo: UCO20210825142549203000000000011
+      sql: select pay_no,parent_order_no from tp_order_pay where pay_status = 1 and deleted = 0 order by id desc
+Template:
+  topic: PAY_ORDER_MESSAGE_TOPIC
+  tag: PAY_ORDER_MESSAGE_TAG
+  message:
+    payOrderNo: UCO20210825142549203000000000011
+    payType: ALIPAY_APP
+    retCode: 1000
+    retMsg: 成功
+    status: 2
