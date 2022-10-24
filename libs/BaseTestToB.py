@@ -17,10 +17,11 @@ class BaseTestToB(Base):
 
     @classmethod
     def setup_class(cls):
-        sysstr = platform.system()
-        if sysstr == "Windows":
+
+        sys_str = platform.system()
+        if sys_str == "Windows":
             cls.path = os.getcwdb().decode().split(os.sep)[-1]
-        elif sysstr == "Linux":
+        elif sys_str == "Linux":
             cls.path = f"{utils.get_path(cls.__name__)}"
         else:
             cls.log.error("Other System")
