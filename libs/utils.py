@@ -124,7 +124,7 @@ def yaml_file(file_name, key, path="", outer_key="Input", index=None):
                 # else:
                 # case_list.append(i["param"])
 
-            return list(zip(data_list, case_name))
+            return list(zip(script_parsing(data_list), case_name))
         except Exception as e:
             raise e
 
@@ -303,6 +303,22 @@ def hump_to_underline(hump: str):
         else:
             underline += hump[i]
     return underline
+
+
+def script_parsing(object):
+    """
+    字符串中Python脚本解析
+    """
+    if type(object) is dict:
+        for i in object:
+            object[i] = script_parsing(object[i])
+    if type(object) is list:
+        for i in range(len(object)):
+            object[i] = script_parsing(object[i])
+    if type(object) is str:
+        if "<<" in object and ">>" in object:
+            object = eval(object.lstrip("<<").rstrip(">>"))
+    return object
 
 
 if __name__ == '__main__':
